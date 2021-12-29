@@ -1,0 +1,125 @@
+nav{
+    position:relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:55px;
+    padding:5px 40px;
+    box-shadow: 0px 3px 3px rgba(168,168,168,0.25);
+}
+
+/*menu*/
+nav .menu{
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+nav .menu .menuBtn{
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+}
+.menuBtn .burger{
+    width:18px;
+    height:3px;
+    border-radius: 5px;
+    background: #19ce60;
+    transition:all .3s linear;
+}
+.menuBtn .burger::before,
+.menuBtn .burger::after{
+    content:'';
+    position:absolute;
+    height:3px;
+    border-radius: 5px;
+    background: #19ce60;
+    transition:all .3s linear;
+}
+.menuBtn .burger::before{
+    width:30px;
+    transform:translateY(-8px);
+}
+.menuBtn .burger::after{
+    width:25px;
+    transform:translateY(8px);
+}
+.menuBtn .open{
+    background: transparent;
+}
+.menuBtn .open::before{
+    transform: rotate(45deg) ;
+}
+.menuBtn .open::after{
+    width:30px;
+    transform: rotate(-45deg);
+}
+.menu ul {
+    display: flex;
+    margin:10px;
+}
+.menu ul li{
+    list-style: none;
+    margin-right: 10px;
+    cursor: pointer;
+    color:#8f8f8f;
+}
+.menu ul li:hover{
+    font-weight: bold;
+    color:#168642;
+}
+.menu .categories{
+    transition:all .3s ease-in;
+}
+.menu .menu-off{
+    opacity:0;
+    transform:translateX(-200%);
+}
+.menu .menu-on{
+    opacity:1;
+}
+
+/*logo*/
+.logo{
+    cursor:pointer;
+    transform: translateX(-100%);
+}
+.logo h3{
+   font-weight:bold;
+   color: #1fb95b;
+}
+
+/*searchbar*/
+.searchbar form{
+    display:flex;
+    align-items: center;
+    background: #f2f0f0;
+    width:160px;
+    height:30px;
+    padding:8px;
+    border-radius: 20px;
+}
+.searchbar form input{
+    outline:none;
+    width:130px;
+    font-size: 0.8rem;
+    background: transparent;
+    border:none;
+}
+.searchbar form button{
+    outline:none;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    font-weight: bold;
+    color:#19ce60;
+    transform: translateY(5%);
+    transition: all 0.2s;
+}
+.searchbar form button:hover{
+    color:#168642;
+    transform: scale(1.05);
+}
