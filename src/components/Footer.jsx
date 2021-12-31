@@ -13,7 +13,6 @@ function Footer() {
                 <div className="copyright">
                     created by &#169; kyungchan Cho
                 </div>
-                
             </div>
         </footer>
         
