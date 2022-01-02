@@ -3,6 +3,8 @@
     position:relative;
     background:#fff;
     width:20.625rem;
+    overflow: hidden;
+
     height:auto;
     margin:10px 10px 0px 0px;
     cursor:pointer;
@@ -19,8 +21,9 @@
     font-family: 'Permanent Marker', cursive;
     z-index: 3;
     opacity: 0;
-    bottom:10px;
+    bottom:-100%;
     left:10px;
+    transition: all 0.5s;
 }
 .food-info .details{
     font-size: 0.813rem;
@@ -31,7 +34,7 @@
 .card-container:before{
     content:'';
     position:absolute;
-    top:0;
+    top:-100%;
     left:0;
     display: block;
     border-radius: 10px;
@@ -44,9 +47,12 @@
 }
 .card-container:hover:before{
     opacity: 1;
+    top:0;
 }
 .card-container:hover .food-info{
     opacity: 1;
+    bottom:10px;
+
 }
 
 .card-container img{
