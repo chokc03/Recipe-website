@@ -1,10 +1,12 @@
 import React from 'react'
 
-function Menu() {
+function Menu({categories}) {
     return (
         <div>
             <ul>
-                <li></li>              
+                {categories.map(category=>(
+                    <li>{category.strCategory}</li>
+                ))}    
             </ul>
         </div>
     )

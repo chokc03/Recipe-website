@@ -3,7 +3,7 @@ import {BsSearch} from 'react-icons/bs';
 import Menu from './Menu';
 import '../../styles/Nav.css'
 
-function Navbar() {
+function Navbar({categories}) {
     const [menu, setMenu] = useState(false);
     const [search, setSearch] = useState('');
     const handleMenu=()=>{
@@ -22,7 +22,9 @@ function Navbar() {
                 <div onClick={handleMenu} className="menuBtn">
                     <div className={menu?"burger open":"burger"}></div>
                 </div>
-                <div className={menu?" categories menu-on":" categories menu-off"}><Menu/></div>
+                <div className={menu?" categories menu-on":" categories menu-off"}>
+                    <Menu categories={categories}/>
+                </div>
             </div>
             <div className="logo">
                 {/* Add router Navlink = Home */}

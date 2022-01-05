@@ -7,7 +7,8 @@ import Cards from './components/Recipe/Cards';
 import Recipies from './components/Recipe/Recipies';
 
 function App() {
-  const[categories,setCategories]=useState({})
+  const[categories,setCategories]=useState([]);
+
   const[close, setClose] = useState(false);
   const handleOpen=()=>{
     setClose(true);
@@ -18,24 +19,24 @@ function App() {
   useEffect(()=>{
     const fetchCategoryData = async()=>{
       try{
-        const res = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
-        setCategories(res.data);
+        const res = await axios.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list');
+        setCategories(res.data.meals);
       }catch(e){
         console.log(e);
       };
-    }
+    };
     fetchCategoryData();
   },[]);
   
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar categories={categories}/>
       <Cards handleOpen={handleOpen}/>
       <Recipies close={close} handleClose={handleClose}/>
       <Footer/>
     </div>
-  );
+  ); 
 }
 
 export default App;
