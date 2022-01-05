@@ -2,10 +2,9 @@
     display:none;
 }
 .recipe-container{
-    position:absolute;
+    position:fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border:5px solid #1fb95b;
     border-radius: 10px;
@@ -13,8 +12,9 @@
     background: #fff;
     top:50%;
     left:50%;
-    width:700px;
-    overflow: hidden;
+    width:90%;
+    height:90%;
+    overflow-y: scroll;
     z-index:999;
     transform: translate(-50%,-50%);
 }
@@ -42,8 +42,9 @@
     font-family: 'Permanent Marker';
 }
 .recipe-container img{
-    width:300px;
-    border-radius: 5px;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
     margin:10px;
 }
 .recipe-container p{
@@ -73,8 +74,5 @@
 .recipe-container .recipe-info span{
     font-weight: bold;
     margin-bottom: -10px;
-
 }
-.recipe-container .recipe-info ol{
 
-}

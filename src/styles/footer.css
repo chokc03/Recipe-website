@@ -1,3 +1,7 @@
+footer{
+    display: absolute;
+    bottom:0;
+}
 .footer-wrap{
     display:flex;
     flex-direction: column;

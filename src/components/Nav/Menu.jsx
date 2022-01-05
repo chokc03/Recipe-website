@@ -4,11 +4,7 @@ function Menu() {
     return (
         <div>
             <ul>
-                <li>Categories</li>
-                <li>Categories</li>
-                <li>Categories</li>
-                <li>Categories</li>
-                
+                <li></li>              
             </ul>
         </div>
     )

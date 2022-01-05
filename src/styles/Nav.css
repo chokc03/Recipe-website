@@ -12,7 +12,10 @@ nav{
 nav .menu{
     display:flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow-x: scroll;
+}
+nav .menu::-webkit-scrollbar{
+    display: none;
 }
 nav .menu .menuBtn{
     position:relative;
