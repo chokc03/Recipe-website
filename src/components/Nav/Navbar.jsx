@@ -3,9 +3,10 @@ import {BsSearch} from 'react-icons/bs';
 import Menu from './Menu';
 import '../../styles/Nav.css'
 
-function Navbar({categories}) {
+function Navbar() {
     const [menu, setMenu] = useState(false);
     const [search, setSearch] = useState('');
+
     const handleMenu=()=>{
         setMenu(value=>!value);
     }
@@ -16,6 +17,7 @@ function Navbar({categories}) {
     const onChange=(e)=>{
         setSearch(e.target.value);
     }
+
     return (
         <nav>
             <div className="menu">
@@ -23,7 +25,7 @@ function Navbar({categories}) {
                     <div className={menu?"burger open":"burger"}></div>
                 </div>
                 <div className={menu?" categories menu-on":" categories menu-off"}>
-                    <Menu categories={categories}/>
+                    <Menu/>
                 </div>
             </div>
             <div className="logo">

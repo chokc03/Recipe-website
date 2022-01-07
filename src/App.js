@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Nav/Navbar';
@@ -7,7 +6,6 @@ import Cards from './components/Recipe/Cards';
 import Recipies from './components/Recipe/Recipies';
 
 function App() {
-  const[categories,setCategories]=useState([]);
   const[close, setClose] = useState(false);
   const handleOpen=()=>{
     setClose(true);
@@ -15,22 +13,9 @@ function App() {
   const handleClose=()=>{
     setClose(false);
   }
-  useEffect(()=>{
-    const fetchCategoryData = async()=>{
-      try{
-        const res = await axios.get('https://www.themealdb.com/api/json/v1/1/list.php?c=list');
-        setCategories(res.data.meals);
-      }catch(e){
-        console.log(e);
-      };
-    };
-    fetchCategoryData();
-  },[]);
-  
-
   return (
     <div className="App">
-      <Navbar categories={categories}/>
+      <Navbar/>
       <Cards handleOpen={handleOpen}/>
       <Recipies close={close} handleClose={handleClose}/>
       <Footer/>
