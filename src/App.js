@@ -8,7 +8,6 @@ import Recipies from './components/Recipe/Recipies';
 
 function App() {
   const[categories,setCategories]=useState([]);
-
   const[close, setClose] = useState(false);
   const handleOpen=()=>{
     setClose(true);

@@ -18,6 +18,9 @@
     z-index:999;
     transform: translate(-50%,-50%);
 }
+.recipe-container::-webkit-scrollbar{
+    display:none;
+}
 .recipe-container .header{
     position:relative;
     height:40px;
