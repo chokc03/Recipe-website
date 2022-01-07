@@ -1,17 +1,18 @@
 import React from 'react'
-import pizza from '../../img/pizza.jpeg'
-
+import { useSelector } from 'react-redux'
 
 function CardDetail({handleOpen}) {
+    const categories = useSelector(state => state.categoryReducer.categories.meals)
     return (
         <>
-            <div onClick={handleOpen}className="card-container">
-                <div className="food-info">
-                    <div className="title">Pizza</div>
-                    <div className="details">20m</div>
+            {categories&&categories.map((category)=>(
+                <div onClick={handleOpen} key={category.idMeal} className="card-container">
+                    <div className="food-info">
+                        <div className="title">{category.strMeal}</div>
+                    </div>
+                    <img src={category.strMealThumb} alt={category.strMeal}/>
                 </div>
-                <img src={pizza} alt="pizza img" />
-            </div>
+            ))}
         </>
     )
 }

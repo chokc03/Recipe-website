@@ -7,9 +7,12 @@ function Footer() {
     return (
         <footer>
             <div className="footer-wrap">
-                <div className="contect">
+                <a href="https://github.com/chokc03/Recipe-website.git" 
+                rel="noreferrer"
+                className="contect"
+                target="_blank">
                     <span>Github<BsGithub/></span>
-                </div>
+                </a>
                 <div className="copyright">
                     created by &#169; kyungchan Cho
                 </div>

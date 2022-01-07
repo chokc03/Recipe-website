@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from 'react'
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
+import { selectedCategory } from '../../redux/modules/category';
 
 function Menu() {
+    const dispatch = useDispatch();
     const[categories,setCategories]=useState([]);
-    const[selectedCategory,setSelectedCategory]=useState('');
     const handleCategory=(e)=>{
-        setSelectedCategory(e.target.innerHTML);
-        console.log(selectedCategory);
+        dispatch(selectedCategory(e.target.innerHTML))
     }
     useEffect(()=>{
         const fetchCategoryData = async()=>{
@@ -19,6 +20,7 @@ function Menu() {
         };
         fetchCategoryData();
       },[]);
+      
     return (
         <div>
             <ul>

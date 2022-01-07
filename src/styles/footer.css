@@ -15,6 +15,13 @@ footer{
     margin-top: 10px;
     box-shadow: inset 0px 5px 3px rgba(168,168,168,0.25);
 }
+.footer-wrap a{
+    text-decoration: none;
+}
+.footer-wrap a:visited{
+    color:#000;
+    
+}
 .footer-wrap .copyright{
     font-size: 0.4rem;
 }
