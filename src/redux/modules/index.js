@@ -5,7 +5,6 @@ import {recipeReducer, selectedIdReducer} from './ingredient';
 const rootReducer = combineReducers({
     categoryReducer,
     selectedCategoryReducer,
-    recipeReducer,
     selectedIdReducer
 });
 
