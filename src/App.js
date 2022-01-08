@@ -15,10 +15,10 @@ function App() {
   }
   return (
     <div className="App">
-      <Navbar/>
-      <Cards handleOpen={handleOpen}/>
-      <Recipies close={close} handleClose={handleClose}/>
-      <Footer/>
+        <Navbar/>
+        <Cards handleOpen={handleOpen}/>
+        <Recipies close={close} handleClose={handleClose}/>
+        <Footer/>
     </div>
   ); 
 }

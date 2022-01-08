@@ -25,7 +25,10 @@ function Menu() {
         <div>
             <ul>
                 {categories.map(category=>(
-                    <li onClick={handleCategory} key={category.idCategory}>{category.strCategory}</li>
+                    <li onClick={handleCategory} key={category.idCategory}>
+                      {category.strCategory}
+                      
+                    </li>
                 ))}    
             </ul>
         </div>

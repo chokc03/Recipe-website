@@ -11,24 +11,21 @@ function Cards(props) {
 
     useEffect(()=>{
         const fetchCategory=async()=>{
-            const res = await axios
-            .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
-            .catch((e)=>{
+            try{
+                const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
+                dispatch(setCategory(res.data));
+            }catch(e){
                 console.log(e);
-            })
-            dispatch(setCategory(res.data));
+            }
         }
-        fetchCategory();        
-    },[selectedCategory])
+        fetchCategory();   
+    },[selectedCategory,dispatch])
 
     return (
         <div className='card-grid-container'>
             <h3>{selectedCategory}</h3>
             <div className="card-grid">
-                <CardDetails handleOpen={props.handleOpen}/>
-                <CardDetails handleOpen={props.handleOpen}/>
-                <CardDetails handleOpen={props.handleOpen}/>
-                <CardDetails handleOpen={props.handleOpen}/>                    
+                <CardDetails handleOpen={props.handleOpen}/>                  
             </div>
         </div>
     )
