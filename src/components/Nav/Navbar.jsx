@@ -19,7 +19,6 @@ function Navbar() {
     return (
         <nav>
             <div className="logo">
-                {/* Add router Navlink = Home */}
                 <h3>Freshy Recipe</h3>
             </div>
             <div className="menu">
@@ -30,7 +29,6 @@ function Navbar() {
                     <Menu/>
                 </div>
             </div>
-            
         </nav>
     )
 }

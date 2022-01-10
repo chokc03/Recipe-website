@@ -108,5 +108,6 @@
 
 - Loading late. In order to get the api from the beginning, it loads late in first appearance.
 
+- Lack of Media Query
 
 
