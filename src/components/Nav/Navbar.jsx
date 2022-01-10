@@ -1,3 +1,10 @@
+/*
+  Writer : Kyungchan Cho
+  This file makes the navbar
+  Fisrt written Date : 2021.12.29
+  Updated Date : 2022.01.09
+*/
+
 import React, {useState} from 'react';
 import Menu from './Menu';
 import '../../styles/Nav.css'

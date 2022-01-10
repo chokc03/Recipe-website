@@ -1,3 +1,10 @@
+/*
+  Writer : Kyungchan Cho
+  This file helps to list the foods with the following category from the api
+  Fisrt written Date : 2021.12.29
+  Updated Date : 2022.01.09
+*/
+
 import React, {useEffect} from 'react';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
@@ -19,6 +26,7 @@ function Cards(props) {
             }
         }
         fetchCategory();   
+        //Render only if when the disaptch and the selectedCategory occur
     },[selectedCategory,dispatch])
 
     return (

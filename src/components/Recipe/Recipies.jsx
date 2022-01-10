@@ -1,3 +1,10 @@
+/*
+  Writer : Kyungchan Cho
+  This file helps give a detail instruction from the selected food from the card
+  Fisrt written Date : 2021.12.29
+  Updated Date : 2022.01.09
+*/
+
 import React,{useState, useEffect} from 'react'
 import '../../styles/Recipe.css';
 import axios from 'axios';

@@ -1,3 +1,10 @@
+/*
+  Writer : Kyungchan Cho
+  This file makes footer for the website
+  Fisrt written Date : 2021.12.29
+  Updated Date : 2022.01.09
+*/
+
 import React from 'react'
 import {BsGithub} from 'react-icons/bs'
 import '../styles/footer.css'

@@ -1,3 +1,10 @@
+/*
+  Writer : Kyungchan Cho
+  This file combines all the componenets from one file to another
+  Fisrt written Date : 2021.12.29
+  Updated Date : 2022.01.09
+*/
+
 import React, {useState} from 'react';
 import './App.css';
 import Footer from './components/Footer';
@@ -6,6 +13,8 @@ import Cards from './components/Recipe/Cards';
 import Recipies from './components/Recipe/Recipies';
 
 function App() {
+  
+  //Handling recipe instructions card
   const[close, setClose] = useState(false);
   const handleOpen=()=>{
     setClose(true);
@@ -13,6 +22,7 @@ function App() {
   const handleClose=()=>{
     setClose(false);
   }
+
   return (
     <div className="App">
         <Navbar/>
