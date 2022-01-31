@@ -29,6 +29,27 @@ nav .menu .menuBtn{
     height:40px;
     margin-right: 20px;
 }
+@media screen and (max-width:1280px){
+    nav .menu .menuBtn{
+        position:absolute;
+        z-index:2;
+        transform: translateY(140px);
+    }
+    .menu .menu-off{
+        opacity:0;
+        margin:0px;
+        transform: translateY(185px);
+    }
+    .menu .categories{
+        background-color: #fff;
+        margin-right:0px;
+        transform: translateY(185px);
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .menuBtn .burger{
     width:18px;
     height:3px;

@@ -12,7 +12,8 @@
     background: #fff;
     top:50%;
     left:50%;
-    width:700px;
+    width:auto;
+    max-width: 700px;
     height:90%;
     overflow-y: scroll;
     z-index:999;
@@ -39,8 +40,12 @@
     color:#d0312d;
 }
 .recipe-container .header h2{
-    position:absolute;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left:50%;
+    width:auto;
     transform: translateX(-50%);
     font-size:1.875rem;
     font-family: 'Permanent Marker';
