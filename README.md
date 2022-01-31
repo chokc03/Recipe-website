@@ -2,7 +2,9 @@
 
 ### Demo
 
-- website:
+<img width="875" alt="image" src="https://user-images.githubusercontent.com/86751419/149062440-e89a4404-a2d6-48f1-85e9-d79968e81e01.png">
+
+- website: https://chokc03.github.io/Recipe-website/
 
 ### Purpose of the project
 
@@ -107,6 +109,5 @@
 - Appearance of instructions. It appears late becasue of getting api, so it collapses with previous instructions
 
 - Loading late. In order to get the api from the beginning, it loads late in first appearance.
-
 
 
