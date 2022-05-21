@@ -6,7 +6,7 @@
 */
 
 import React, {useState} from 'react';
-import './App.css';
+import './styles/App.scss';
 import Footer from './components/Footer';
 import Navbar from './components/Nav/Navbar';
 import Cards from './components/Recipe/Cards';

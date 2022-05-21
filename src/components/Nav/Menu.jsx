@@ -2,7 +2,7 @@
   Writer : Kyungchan Cho
   This file helps to list the categories got from the api in the navbar
   Fisrt written Date : 2021.12.29
-  Updated Date : 2022.01.09
+  Updated Date : 2022.05.21
 */
 
 import React,{useState,useEffect} from 'react'
@@ -10,13 +10,14 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { selectedCategory } from '../../redux/modules/category';
 
-function Menu() {
+function Menu(props) {
     const dispatch = useDispatch();
     const[categories,setCategories]=useState([]);
 
     //Adding selected Category into selectedCategory state by using useDispatch
     const handleCategory=(e)=>{
-        dispatch(selectedCategory(e.target.innerHTML))
+        dispatch(selectedCategory(e.target.innerHTML));
+        props.handleMenuBar();
     }
     useEffect(()=>{
         const fetchCategoryData = async()=>{
@@ -39,7 +40,6 @@ function Menu() {
                 {categories.map(category=>(
                     <li onClick={handleCategory} key={category.idCategory}>
                       {category.strCategory}
-                      
                     </li>
                 ))}    
             </ul>

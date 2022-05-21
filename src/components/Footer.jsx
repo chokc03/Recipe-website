@@ -7,7 +7,7 @@
 
 import React from 'react'
 import {BsGithub} from 'react-icons/bs'
-import '../styles/footer.css'
+import '../styles/footer.scss'
 
 
 function Footer() {

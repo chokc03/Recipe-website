@@ -6,7 +6,7 @@
 */
 
 import React,{useState, useEffect} from 'react'
-import '../../styles/Recipe.css';
+import '../../styles/Recipe.scss';
 import axios from 'axios';
 import {CgCloseO} from 'react-icons/cg';
 import { useSelector} from 'react-redux';

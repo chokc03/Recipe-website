@@ -16,8 +16,8 @@ function CardDetail({handleOpen}) {
     return (
         <>
             {categories&&categories.map((category)=>(
-                <div onClick={handleOpen} key={category.idMeal}>
-                    <div onClick={()=>dispatch(selectedRecipe(category.idMeal))} className="card-container">
+                <div className="food-card-wrapper" onClick={handleOpen} key={category.idMeal}>
+                    <div onClick={()=>dispatch(selectedRecipe(category.idMeal))} className="food-card">
                         <div className="food-info">
                             <div className="title">{category.strMeal}</div>
                         </div>

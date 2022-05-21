@@ -10,7 +10,7 @@ import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 import CardDetails from './CardDetail';
 import { setCategory } from '../../redux/modules/category';
-import '../../styles/Cards.css'
+import '../../styles/Cards.scss'
 
 function Cards(props) {
     const selectedCategory = useSelector(state=>state.selectedCategoryReducer.category);
@@ -30,9 +30,9 @@ function Cards(props) {
     },[selectedCategory,dispatch])
 
     return (
-        <div className='card-grid-container'>
+        <div className='cards'>
             <h3>{selectedCategory}</h3>
-            <div className="card-grid">
+            <div className="food-card-grid">
                 <CardDetails handleOpen={props.handleOpen}/>                  
             </div>
         </div>
