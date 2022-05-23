@@ -35,11 +35,13 @@ function Recipies({close, handleClose}) {
                     <h2>{details.strMeal}</h2>
                     <div onClick={handleClose} className="close"><CgCloseO /></div>
                 </div>
-                <img src={details.strMealThumb} alt={details.strMeal} />
-                <a target="_blank" rel="noreferrer" href={details.strYoutube}>{details.strYoutube}</a>
+                
+                <a target="_blank" rel="noreferrer" href={details.strYoutube}>
+                    <img src={details.strMealThumb} alt={details.strMeal} />
+                </a>
                 <div className="ingredients">
                     <span>Instructions :</span>
-                    {details.strInstructions}
+                    <p>{details.strInstructions}</p>
                 </div>
             </div>
         </>
