@@ -5,22 +5,27 @@
   Updated Date : 2022.01.09
 */
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 import CardDetails from './CardDetail';
 import { setCategory } from '../../redux/modules/category';
+import Loading from '../Loading';
 import '../../styles/Cards.scss'
 
 function Cards(props) {
     const selectedCategory = useSelector(state=>state.selectedCategoryReducer.category);
     const dispatch  = useDispatch()
+    const [loadingFoods,setLoadingFoods] = useState(false);
 
     useEffect(()=>{
         const fetchCategory=async()=>{
             try{
-                const res = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
-                dispatch(setCategory(res.data));
+                await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
+                .then((res)=>{
+                    dispatch(setCategory(res.data));
+                })
+                setLoadingFoods(true);
             }catch(e){
                 console.log(e);
             }
@@ -32,7 +37,10 @@ function Cards(props) {
     return (
         <div className='cards'>
             <h3>{selectedCategory}</h3>
-            <div className="food-card-grid">
+            <div className={loadingFoods?"loading-finish":"loading"}>
+                <Loading/>
+            </div>
+            <div className={loadingFoods?"food-card-grid":"loading-cards"}>
                 <CardDetails handleOpen={props.handleOpen}/>                  
             </div>
         </div>

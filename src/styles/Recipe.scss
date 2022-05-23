@@ -21,6 +21,17 @@
     &::-webkit-scrollbar{
         display:none;
     }
+    .recipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loading-recipe{
+        display: none;
+    }
+    .loading-finish{
+        display: none;
+    }
 }
 .recipe-container{
     .header{
