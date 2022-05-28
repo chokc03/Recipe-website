@@ -2,7 +2,7 @@
   Writer : Kyungchan Cho
   This file helps give a detail instruction from the selected food from the card
   Fisrt written Date : 2021.12.29
-  Updated Date : 2022.01.09
+  Updated Date : 2022.05.23
 */
 
 import React,{useState, useEffect} from 'react'
@@ -21,6 +21,7 @@ function Recipies({close, handleClose}) {
     useEffect(()=>{
         const fetchDetail=async()=>{
             try{
+                //Initialize the data and the loading state in order to prevent collapsing with previous data
                 setLoadingFoods(false);
                 setDetails([]);
                 await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)

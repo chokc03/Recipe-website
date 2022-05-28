@@ -104,6 +104,27 @@
         const categories = useSelector(state => state.categoryReducer.categories.meals);
         ```
 
+#### Loading functions
+
+- Show that the page is loading 
+    ```ts
+        //Added loading state
+        //If loadingFoods is false then the getting data from API is in process
+        //If loadingFoods is true then the getting data is complete
+        const [loadingFoods,setLoadingFoods] = useState(false);
+        useEffect(()=>{
+            const fetchCategory=async()=>{
+                try{
+                    await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
+                    .then((res)=>{
+                        dispatch(setCategory(res.data));
+                    })
+                    setLoadingFoods(true);
+        .
+        .
+        .
+    ```
+
 ### Things to improve
 
 - Hard to read instructions. Does not have any paragragh spacing. Tryied to use '.replace' function but did not change anything in the instruction part.

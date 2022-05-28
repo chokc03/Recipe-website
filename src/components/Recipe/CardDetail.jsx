@@ -2,7 +2,7 @@
   Writer : Kyungchan Cho
   This file helps to give the detail foods for the selected category from the api
   Fisrt written Date : 2021.12.29
-  Updated Date : 2022.01.09
+  Updated Date : 2022.05.23
 */
 
 import React from 'react'

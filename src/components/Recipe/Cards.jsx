@@ -2,7 +2,7 @@
   Writer : Kyungchan Cho
   This file helps to list the foods with the following category from the api
   Fisrt written Date : 2021.12.29
-  Updated Date : 2022.01.09
+  Updated Date : 2022.05.23
 */
 
 import React, {useEffect, useState} from 'react';
@@ -16,6 +16,9 @@ import '../../styles/Cards.scss'
 function Cards(props) {
     const selectedCategory = useSelector(state=>state.selectedCategoryReducer.category);
     const dispatch  = useDispatch()
+    //Added loading state
+    //If loadingFoods is false then the getting data from API is in process
+    //If loadingFoods is true then the getting data is complete
     const [loadingFoods,setLoadingFoods] = useState(false);
 
     useEffect(()=>{
