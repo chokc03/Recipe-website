@@ -106,8 +106,8 @@
 
 ### Things to improve
 
-- Appearance of instructions. It appears late becasue of getting api, so it collapses with previous instructions
+- Hard to read instructions. Does not have any paragragh spacing. Tryied to use '.replace' function but did not change anything in the instruction part.
 
-- Loading late. In order to get the api from the beginning, it loads late in first appearance.
+- Lack of File structure ability. Does not have clean File structure in my source code file. 
 
 
